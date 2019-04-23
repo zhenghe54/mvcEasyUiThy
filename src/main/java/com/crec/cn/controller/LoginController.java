@@ -21,7 +21,7 @@ public class LoginController {
             subject.login(token);
             Session session=subject.getSession();
             session.setAttribute("subject", subject);
-            return "redirect:index";
+            return "index";
              
         } catch (AuthenticationException e) { 
             model.addAttribute("error", "错误"); 
