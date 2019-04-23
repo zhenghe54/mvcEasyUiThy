@@ -1,0 +1,144 @@
+
+a {
+     color: grey;
+     text-decoration: none;
+ }
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: grey;
+}
+.tool-div{
+    color:grey;
+}
+.send-btn-div{
+    margin-top: 5px;
+    width: 100%;
+    text-align: right;
+}
+.msg-Box{
+min-height: 100px;
+overflow: hidden;
+}
+.msg-Box:focus{
+    outline: none;
+}
+.edit-area{
+    padding: 5px 10px;
+}
+.msg-display-div{
+ padding-top: 45px;
+ overflow-x: hidden;
+ min-height: 420px;
+ border-bottom: 1px solid #dddddd;
+}
+.title-div{
+    text-align: center;
+    height: 31px;
+    border-bottom: 1px solid #dddddd;
+}
+.tab-body-div{
+    padding: 5px 10px;
+}
+.list-group-item-icon{
+    margin-right: 10px;
+}
+.list-group-item{
+    cursor: pointer;
+}
+.list-group-item:hover{
+    background-color:#5BC0DE ;
+    color: #ffffff;
+}
+.noCommentContent{
+    line-height:598px ;
+    height: 598px;
+    text-align: center;
+}
+#connectStatusDiv{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 2px;
+}
+.msgDivA{
+    text-align: left;
+    padding:5px;
+}
+.msgDivAII{
+    text-align: right;
+    padding:5px;
+}
+.msgDivB{
+    display: inline-block;
+    max-width: 90%;
+    overflow-x: hidden;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    word-wrap:break-word;
+    border:1px solid #dddddd;
+    background: #EEEEEE;
+}
+.msgDivBII{
+    text-align: left;
+    display: inline-block;
+    overflow-x: hidden;
+    max-width: 90%;
+    border:1px solid #FFFAE3;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px;
+    word-wrap:break-word;
+    background-color:#B2E281;
+}
+.small-date{
+    margin-right: 5px;
+    color: grey;
+}
+.small-title{
+    color: grey;
+    letter-spacing:2px;
+}
+.small-text{
+    font-family: 黑体;
+    font-size: 16px;
+}
+.small-text img{
+    max-width: 100%;!important;
+    max-height: 100%;!important;
+}
+.selected-item{
+    color: #ffffff;
+    background-color: #8CBCD2;
+}
+.flex-div{
+    position:absolute;
+    width:100%;
+    min-height: 650px;
+    display:flex;
+    flex-direction: row;
+}
+.fixDiv{
+    padding-top: 10px;
+    z-index: 9999;
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-right: 1px solid #dddddd;
+}
+.flex-item-right{
+    width: 100%;
+    min-width: 800px;
+    padding-left: 300px;
+    overflow-x: hidden;
+}
+.fixTitleDiv{
+    background-color:#ffffff;
+    z-index: 9998;
+    position: fixed;
+    width:100%;
+    padding-top:10px;
+    padding-left: 300px;
+}

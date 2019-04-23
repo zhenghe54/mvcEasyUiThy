@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>hello</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="static/style.css" />
+</head>
+<body>
+
+	<div class="workingroom">
+		<div class="loginDiv">
+
+
+			<a th:href="@{/user/login}">登录</a>
+			<span class="desc">你好，${subject.principal}，</span>
+			<a th:href="@{/doLogout}">退出</a>
+			
+			<a th:href="@{/listProduct}">查看产品</a><span class="desc">(登录后才可以查看) </span><br>
+			<a th:href="@{/deleteProduct}">删除产品</a><span class="desc">(要有产品管理员角色,
+				zhang3没有，li4 有) </span><br> <a href="deleteOrder">删除订单</a><span
+				class="desc">(要有删除订单权限, zhang3有，li4没有) </span><br>
+		</div>
+	</div>
+</body>
+</html>

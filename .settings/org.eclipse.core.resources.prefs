@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/crec/cn/controller/LoginController.java=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/loginFail.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/view/demo.html=UTF-8
+encoding//src/main/webapp/WEB-INF/view/web/compress.html=UTF-8
+encoding//src/main/webapp/WEB-INF/view/web/doc.html=UTF-8
+encoding//src/main/webapp/WEB-INF/view/web/docxConvert.html=UTF-8
+encoding//src/main/webapp/WEB-INF/view/web/fileNotSupported.html=UTF-8
+encoding//src/main/webapp/WEB-INF/view/web/html.html=UTF-8
+encoding//src/main/webapp/WEB-INF/view/web/index.html=UTF-8
+encoding//src/main/webapp/WEB-INF/view/web/media.html=UTF-8
+encoding//src/main/webapp/WEB-INF/view/web/pdf.html=UTF-8
+encoding//src/main/webapp/WEB-INF/view/web/picture.html=UTF-8
+encoding//src/main/webapp/index.jsp=UTF-8
+encoding/<project>=UTF-8

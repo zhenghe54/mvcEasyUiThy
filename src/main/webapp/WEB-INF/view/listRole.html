@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>hello</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../static/style.css" />
+</head>
+<body>
+
+	<div class="workingroom">
+		<div th:replace="include/menu::menu"></div>
+		<table>
+        <tr>
+            <td>id</td>
+            <td>角色名称</td>
+            <td>角色描述</td>
+            <td>权限</td>
+            <td>编辑</td>
+            <td>删除</td>
+        </tr>
+        <tr th:each="r: ${rs}">
+				<td th:text="${r.id}"></td>
+				<td th:text="${r.name}"></td>
+				<td th:text="${r.desc_}"></td>
+				 <td  >
+				 <span th:each="rp:${r.pNames}">
+				 	<p th:text="${rp}"></p>
+				 </span>
+				 </td>  
+			<!-- 	<td th:each="p:${role_permissions[r]}" th:text="${p.name}">  
+ 				</td> -->
+				<td><a th:href="@{/config/editRole(id=${r.id})}">编辑</a></td>
+				<td><a th:href="@{/config/deleteRole(id=${r.id})}">删除</a></td>
+			</tr>
+    </table>
+     
+    <div class="addOrEdit" >
+        <form action="addRole" method="post">
+            角色名称: <input type="text" name="name"> <br>
+            角色描述: <input type="text" name="desc_"> <br><br>
+            <input type="submit" value="增加">
+        </form>  
+    </div>
+    </div>
+</body>
+</html>

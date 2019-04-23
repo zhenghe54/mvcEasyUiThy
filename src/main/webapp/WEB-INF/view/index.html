@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>hello</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="static/style.css" />
+</head>
+<body>
+
+	<div class="workingroom">
+		<div class="loginDiv">
+			<div th:if="${subject.principal}==null">
+				<a th:href="@{/login}">登录</a>
+			</div>
+			<div th:if="${subject.principal}!=null">
+				 <p class="desc"  th:text="|你好，${subject.principal}|" ></p>
+				 <a th:href="@{/doLogout}">退出</a>
+			 </div>
+			 <a th:href="@{/listProduct}">查看产品</a><span
+				class="desc">(要有查看产品权限, zhang3有，li4 有) </span><br>
+				 <a	th:href="@{/deleteProduct}">删除产品</a><span class="desc">(要有删除产品权限, zhang3有，li4 有) </span><br>
+				 <a href="deleteOrder">删除订单</a><span class="desc">(要有删除订单权限, zhang3有，li4没有) </span><br>
+		</div>
+		<div th:replace="web/index::index"></div>
+	</div>
+</body>
+</html>

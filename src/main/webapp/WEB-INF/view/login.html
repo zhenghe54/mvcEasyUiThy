@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>hello</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="static/style.css" />
+     <link rel="stylesheet" type="text/css" media="all" href="../../webapp/static/common/js/easyUi/themes/default/easyui.css" th:href="@{/static/common/js/easyUi/themes/default/easyui.css}"/>
+     <link type="text/css"   media="all" rel="stylesheet" href="../../webapp/static/common/js/easyUi/themes/icon.css" th:href="@{/static/common/js/easyUi/themes/icon.css}">
+     <script type="text/javascript" src="./../webapp/static/common/js/easyUi/jquery.min.js" th:src="@{/static/common/js/easyUi/jquery.min.js}"></script>
+     <script type="text/javascript" src="./../webapp/static/common/js/easyUi/jquery.easyui.min.js" th:src="@{/static/common/js/easyUi/jquery.easyui.min.js}"></script>
+</head>
+<body>
+
+	<div class="workingroom">
+
+		<div class="errorInfo"><p th:text="${error}"></p></div>
+		<form id="login" method="post">
+			账号： <input type="text" name="name" class="easyui-textbox"> <br> 密码： <input
+				type="text" name="password"  class="easyui-passwordbox"> <br>掩码框：
+				 <input data-toggle="topjui-maskedbox" mask="(999) 999-9999" label="Phone Number:" labelPosition="top"> <br> 
+				<button type="submit" id="login" onclick="valicode();">登录
+                		</button> <br> <br>
+			<div>
+				<span class="desc">账号:zhang3 密码:12345 角色:admin</span><br> <span
+					class="desc">账号:li4 密码:abcde 角色:productManager</span><br>
+			</div>
+
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+	function valicode() {
+		$('#login').form('submit', {    
+		    url:'/login'
+		});
+	}
+</script>
+</html>

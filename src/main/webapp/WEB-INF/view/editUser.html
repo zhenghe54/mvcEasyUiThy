@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>hello</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../static/style.css" th:href="@{/static/style.css}"/>
+<script type="text/javascript"
+	src="../static/common/js/jquery/jquery-3.2.0.min.js"
+	th:src="@{/static/common/js/jquery/jquery-3.2.0.min.js}"></script>
+</head>
+<body>
+	<div class="workingroom">
+		<div th:replace="include/menu::menu"></div>
+		<div class="addOrEdit">
+			<form action="updateUser" method="post">
+				用户名: <input type="text" name="name" th:value="${user.name}">
+				<br> <br> 密码: <input type="password" name="password"
+					value="" placeholder="留空就表示不修改密码"> <br> <br>
+				配置角色:<br>
+				<div
+					style="text-align: left; width: 300px; margin: 0px auto; padding-left: 50px">
+	
+						<input type="checkbox" th:each="r:${rs}" name="roleIds"
+							th:value="${r.id}" th:text="${r.name}" />
+					</div>
+				<br> <input type="hidden" name="id" th:value="${user.id}">
+				<input type="submit" value="修改">
+			</form>
+		</div>
+	</div>
+</body>
+<script th:inline="javascript">
+$(document).ready(function(){ 
+	var currentRoles=[[${currentRoles}]];
+	if(currentRoles.length>0){
+		for(var i=0;i<currentRoles.length;i++){
+			console.log(currentRoles[i].id);
+			$("input:checkbox").eq(currentRoles[i].id).attr('checked', 'true');
+		}
+	}
+})
+</script>
+</html>

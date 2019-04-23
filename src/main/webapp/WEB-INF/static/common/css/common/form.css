@@ -1,0 +1,147 @@
+.drag-item{
+		list-style-type:none;
+		display:block;
+		padding:3px;
+		border:1px solid #ccc;
+		margin:1px;
+		height:auto;
+		/* width:60px; */
+		text-align:center;
+		min-width:20px;
+		background:#fafafa;			
+		font:12px tahoma, arial, helvetica, sans-serif;
+		border-radius:8px;
+		background-color: #EEEEEE;
+	}	
+	
+	.drag-item2{
+		list-style-type:none;
+		display:inline-block;
+		padding:3px;
+		border:1px solid #ccc;
+		margin:1px;
+		height:auto;
+		/* width:60px; */
+		text-align:center;
+		min-width:20px;
+		background:#fafafa;			
+		font:12px tahoma, arial, helvetica, sans-serif;
+		border-radius:8px;
+		background-color: #EEEEEE;
+		cursor: pointer;
+	}	
+	.drag-item3{
+		list-style-type:none;
+		display:inline-block;
+		padding:3px;
+		border:1px solid #ccc;
+		margin:1px;
+		height:auto;
+		/* width:60px; */
+		text-align:center;
+		min-width:20px;
+		background:#fafafa;			
+		font:12px tahoma, arial, helvetica, sans-serif;
+		border-radius:8px;
+		background-color: #EEEEEE
+	}	
+	
+	
+	
+	.container_1{
+		float: left;
+		width: 150px;
+		height: 25px;
+		border: solid 1px #95B8E7;
+		margin-top: 2px;
+		margin-right: 10px;
+		margin-left:5px;
+		border-radius:3px;
+	}
+	.container_2{
+		float: left;
+		width: auto;
+		height: 25px;
+		min-width:300px;
+		margin-left:5px;
+		border: solid 1px #95B8E7;
+		margin-top: 2px;
+		margin-right: 10px;
+		border-radius:3px;
+	}
+	.labelDiv{
+		margin-left: 5px;
+		float: left;
+		line-height: 33px;
+	}
+	.labelDiv_1{
+		margin-left: 5px;
+		float: left;
+		line-height: 33px;
+		width: 130px;
+	}
+	.labelDiv_2{
+		margin-left: 5px;
+		float: left;
+		line-height: 33px;
+		width: 200px;
+	}	
+	
+	.labelDiv_3{
+		margin-left: 5px;
+		float: left;
+		line-height: 33px;
+		width: 120px;
+	}
+	.labelDiv_4{
+		margin-left: 5px;
+		float: left;
+		line-height: 33px;
+		width: 150px;
+	}
+	.labelDiv_5{
+		margin-left: 5px;
+		float: left;
+		line-height: 33px;
+		width: 160px;
+	}
+	.labelDiv_6{
+		margin-left: 5px;
+		float: left;
+		line-height: 33px;
+		width: 260px;
+	}
+	.labelDiv_7{
+		margin-left: 5px;
+		float: left;
+		line-height: 33px;
+		width: 60px;
+	}
+	.span_left{
+		float:left;
+		margin-left: 3px;
+	}
+	.over{
+			background:#FBEC88;
+	}
+	.assigned{
+		border:1px solid #BC2A4D;
+	}
+	.span_margin{
+		margin-top: 3px;
+	}
+	.span_cursor{
+		cursor: pointer;
+	}
+	input{
+		width: 60px;
+	}	
+	#sqrt{
+		color:'red';
+	}
+	
+ .panel_head{
+       	border-left: 0;
+       	border-top:0;
+       	border-right: 0;
+       }

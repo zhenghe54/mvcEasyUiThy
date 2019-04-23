@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link rel="stylesheet" type="text/css" media="all" href="../../webapp/static/common/js/easyUi/themes/default/easyui.css" th:href="@{/static/common/js/easyUi/themes/default/easyui.css}"/>
+     <link type="text/css"   media="all" rel="stylesheet" href="../../webapp/static/common/js/easyUi/themes/icon.css" th:href="@{/static/common/js/easyUi/themes/icon.css}">
+     <script type="text/javascript" src="./../webapp/static/common/js/easyUi/jquery.min.js" th:src="@{/static/common/js/easyUi/jquery.min.js}"></script>
+     <script type="text/javascript" src="./../webapp/static/common/js/easyUi/jquery.easyui.min.js" th:src="@{/static/common/js/easyUi/jquery.easyui.min.js}"></script>
+</head>
+<body>
+	<div class="easyui-panel">
+	    <h2>显示 转义和非转义的 html 文本</h2>
+	    <p th:text="${htmlContent}" ></p>
+	    <p th:utext="${htmlContent}" ></p>
+	</div>
+	 
+	<div class="easyui-panel">
+	    <h2>显示对象以及对象属性</h2>
+	    <p th:text="${person}" ></p>
+	    <p th:text="${person.username}" ></p>
+	    <p th:text="${person.password}" ></p>
+	</div>
+	 
+	<div class="easyui-panel" th:object="${person}">
+	    <h2>*{}方式显示属性</h2>
+	    <p th:text="*{username}" ></p>
+	</div>
+	 
+	<div class="easyui-panel">
+	    <h2>算数运算</h2>
+	    <p th:text="${person.age+999}" ></p>
+	</div>
+	 <div class="easyui-panel">
+	    <div th:replace="include::footer1" ></div>
+	    <div th:replace="include::footer2(2015,2018)" ></div>
+	</div>
+	<div class="easyui-panel">
+	    <h2>条件判断</h2>
+	    <p th:if="${bool}" >如果bool 是 true ，本句话就会显示</p>
+	    <p th:if="${not bool}" >取反 ，所以如果bool是 true ，本句话就不会显示</p>
+	    <p th:unless="${bool}" >unless 等同于上一句，所以如果bool 是 true ，本句话就不会显示</p>
+	    <p th:text="${bool}?'当bool为真的时候，显示本句话，这是用三相表达式做的':''" ></p>
+	</div>
+	 <div class="showing">
+	    <h2>遍历</h2>
+	 
+	    <table>
+	        <thead>
+	            <tr>
+	            	<th>编号</th>
+	                <th>用户名</th>
+	                <th>密码</th>
+	                <th>年龄</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <tr th:class="${status.even}?'even':'odd'"  th:each="p,status: ${listPerson}">
+	            <td  th:text="${status.index}"></td>
+	                <td th:text="${p.username}"></td>
+	                <td th:text="${p.password}"></td>
+	                <td th:text="${p.age}"></td>
+	            </tr>
+	        </tbody>
+	    </table>
+	</div>
+	<div class="showing">
+    <h2>遍历 select </h2>
+ 
+    <select size="10">
+        <option th:each="p:${listPerson}" th:value="${p.age}"     th:selected="${p.age==person.age}"    th:text="${p.username}" ></option>
+    </select>
+    <div class="showing">
+    <h2>遍历 radio </h2>
+   		 <input name="person" type="radio" th:each="p:${listPerson}" th:value="${p.age}"  th:checked="${p.age==person.age}"     th:text="${p.username}"  />
+ 
+	</div>
+	 <div class="showing date">
+		<h2>格式化日期</h2>
+		直接输出日期 ${now}:
+		<p th:text="${now}"></p>
+		默认格式化 ${#dates.format(now)}:
+		<p th:text="${#dates.format(now)}"></p>
+		自定义格式化 ${#dates.format(now,'yyyy-MM-dd HH:mm:ss')}:
+		<p th:text="${#dates.format(now,'yyyy-MM-dd HH:mm:ss')}"></p>
+	</div>
+</div>
+</body>
+ 
+</html>

@@ -1,0 +1,35 @@
+.set_7_btn-wrapper {
+  float:left;
+  width:auto;
+  line-height: 45px;
+  display: inline-block;
+  margin-right:2em;
+  text-align:center;
+ }
+ 
+.set_7_button{
+  stroke-width: 3px;
+  fill: transparent;
+  stroke: #00FFF8;
+  stroke-dasharray: 85 400;
+  stroke-dashoffset: -200;
+  transition: 1s all ease;
+}
+
+.set_7_btn-wrapper:hover .set_7_button {
+  stroke-dasharray: 50 0;
+  stroke-width: 3px;
+  stroke-dashoffset: 0;
+  stroke: #00FFF8;
+}
+
+.set_7_text {
+  margin-top:-55px;
+  text-align: center;
+}
+
+.set_7_text a {
+  color: #333;
+  text-decoration: none;
+  font-weight:400;
+}

@@ -1,0 +1,6 @@
+body{
+	border: 0;
+}
+.switchbutton-on { background: #00E800; color: #000000;font-size:12px; }  /*开时的样式*/
+.switchbutton-off { background: #E1E1E1; color: #000000;font-size:12px;  } /*关时的样式*/
+.switchbutton-handle { background: #FFFF02; color: #000000; font-size:12px; } /*关时的样式*/
